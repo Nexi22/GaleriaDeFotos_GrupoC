@@ -6,13 +6,13 @@ require_once  ('App/ModelFotos/modelFotos.php');
 Class ControllerFotos{
 
 
-     Private $ViewFotos;
-     Private $ModelFotos; 
+     Private $View;
+     Private $Model; 
 
      Function __construct(){
 
-        $this->viewFotos=new ViewFotos();
-        $this->ModelFotos= new ModelFotos(); 
+        // $this->viewFotos=new ViewFotos();
+        $this->Model= new ModelFotos(); 
 
 
 
@@ -20,15 +20,17 @@ Class ControllerFotos{
 
      Function verFotos(){
 
-        $fotos=$this->ModelFotos->datos_de_tabla_de_fotos(); 
-        $this->viewFotos->verfotos(); 
+        $fotos=$this->Model->datos_de_tabla_de_fotos(); 
+        // $this->viewFotos->verfotos(); 
 
 
-            }
-        }
-     
-        Function eliminarFoto($id){
+            } 
+            Function eliminarFoto($id){
 
-            $fotos=$this->ModelFotos->eliminarFoto($id);
+         $this->Model->eliminarfotos($id);
             
         }
+        }
+     
+      
+      
