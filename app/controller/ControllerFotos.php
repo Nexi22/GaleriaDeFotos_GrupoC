@@ -1,7 +1,7 @@
 <?php
 
-requiere_once 'App/ViewFotos/ViewFotos.php'; 
-requiere_once  'App/ModelFotos/ModelFotos.php'; 
+require_once ('App/ViewFotos/ViewFotos.php');
+require_once  ('App/ModelFotos/modelFotos.php'); 
 
 Class ControllerFotos{
 
@@ -20,7 +20,7 @@ Class ControllerFotos{
 
      Function verFotos(){
 
-        $fotos=$this->ModelFotos->verfotos(); 
+        $fotos=$this->ModelFotos->datos_de_tabla_de_fotos(); 
         $this->viewFotos->verfotos(); 
 
 
