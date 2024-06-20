@@ -27,3 +27,8 @@ Class ControllerFotos{
             }
         }
      
+        Function eliminarFoto($id){
+
+            $fotos=$this->ModelFotos->eliminarFoto($id);
+            
+        }
