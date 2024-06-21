@@ -18,14 +18,14 @@ Class ControllerFotos{
 
      }
 
-     Function verFotos(){
+     Function Fotos(){
 
         $fotos=$this->Model->datos_de_tabla_de_fotos(); 
         // $this->viewFotos->verfotos(); 
 
 
             } 
-            Function eliminarFoto($id){
+            Function DeleteFoto($id){
 
          $this->Model->eliminarfotos($id);
             

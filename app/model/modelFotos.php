@@ -3,7 +3,7 @@ require_once "app/model/Model.php";
 
 class ModelFotos extends Model
 { 
-function datos_de_tabla_de_fotos()
+function datos_fotos()
     { 
 
         $db = $this->createConexion();
@@ -14,7 +14,7 @@ function datos_de_tabla_de_fotos()
         $vuelos = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $vuelos;
     }
-    function eliminarfotos($id)
+    function eliminar_fotos($id)
     {
         $db = $this->createConexion();
         $eliminado = $db->prepare("DELETE FROM tabla_de_fotografias WHERE ID = ?");
